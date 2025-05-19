@@ -168,13 +168,11 @@ async function rasparConteudoPagina(url: string) {
       url,
       titulo,
       conteudo: paragrafos.join('\n\n'),
-      imagem,
       imagens,
-      links: Array.from(linksSet),
       autor,
     };
   } catch (e) {
-    return { url, titulo: '', conteudo: '', imagem: '', imagens: [], links: [], autor: '', erro: true };
+    return { url, titulo: '', conteudo: '', imagens: [], autor: '', erro: true };
   }
 }
 
