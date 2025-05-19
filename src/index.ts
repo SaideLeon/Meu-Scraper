@@ -1,16 +1,11 @@
-import { fichador } from "./tools/fichador"; 
-import { writeFileSync, mkdirSync } from 'node:fs';
-import path from 'path';
+import { fichador } from "./tools/fichador";  
 
 async function main() {
   const termoBusca = 'fotossíntese';
-  const todasPaginas = true;
-  const fichas = await fichador(termoBusca, todasPaginas);
-  // Cria o diretório 'dados' se não existir
-  mkdirSync('dados', { recursive: true });
-
-  // Salva as fichas em um arquivo JSON
-  writeFileSync(path.join('dados', `fichas-leitura-${termoBusca}.json`), JSON.stringify(fichas, null, 2), 'utf-8');
+  const todasPaginas = false;
+  const promptCustomizado = 'Resuma o texto abaixo em linguagem simples, focando apenas nos conceitos científicos principais.';
+  // Passe 'false' como terceiro argumento para NÃO salvar automaticamente
+  await fichador(termoBusca, todasPaginas, true, promptCustomizado);  
 }
 
 main().catch(console.error);
