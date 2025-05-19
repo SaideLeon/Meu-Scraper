@@ -67,6 +67,6 @@ npm run lint
 
 ---
 
-**Autor:** Rogerio
+**Autor:** Saíde Omar Saíde
 
 Projeto para fins educacionais e acadêmicos. Não utilize para fins comerciais sem autorização dos autores do conteúdo original.
